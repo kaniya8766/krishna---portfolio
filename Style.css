@@ -1,56 +1,118 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f2f2f2;
+  background: #f4f4f4;
 }
 
 header {
-  background-color: #0077cc;
+  background: #007bff;
   color: white;
-  padding: 20px 0;
+  padding: 30px 20px;
   text-align: center;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  background: #333;
+  margin: 0;
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+  padding: 12px 20px;
+  display: block;
 }
 
-main {
-  padding: 20px;
-  text-align: center;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #0077cc;
-  color: white;
-  border: none;
-  cursor: pointer;
+nav ul li a:hover {
+  background: #555;
   border-radius: 4px;
 }
 
-button:hover {
-  background-color: #005fa3;
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+  background: #e2e8f0;
+}
+
+.hero button {
+  background: #007bff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background: #0056b3;
+}
+
+.features, .courses-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  background: #007bff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #0056b3;
 }
 
 footer {
-  background-color: #333;
-  color: white;
   text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  padding: 20px;
+  background: #333;
+  color: white;
 }
