@@ -1,13 +1,15 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  background: #f4f4f4;
+  background: #F0F8FF;
+  scroll-behavior: smooth;
+  color: #222;
 }
 
 header {
-  background: #007bff;
+  background: linear-gradient(135deg, #004080, #002f66);
   color: white;
-  padding: 30px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
@@ -16,103 +18,95 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  background: #333;
+  background: #002244;
   margin: 0;
-}
-
-nav ul li {
-  margin: 0 10px;
+  flex-wrap: wrap;
 }
 
 nav ul li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  padding: 12px 20px;
+  padding: 14px 24px;
   display: block;
+  transition: background 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-  background: #555;
+  background: #004080;
   border-radius: 4px;
-}
-
-main {
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 20px;
 }
 
 .hero {
+  background: #E0F7FF;
+  border-radius: 12px;
   text-align: center;
-  padding: 50px;
-  background: #e2e8f0;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
 }
 
 .hero button {
-  background: #007bff;
-  color: white;
-  padding: 12px 25px;
+  background: linear-gradient(135deg, #00CFFF, #0099cc);
+  color: #fff;
+  padding: 16px 40px;
   border: none;
-  border-radius: 4px;
+  border-radius: 50px;
   cursor: pointer;
+  font-size: 1.1em;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .hero button:hover {
-  background: #0056b3;
-}
-
-.features, .courses-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 .card {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 300px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-align: center;
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  width: 320px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card img {
-  width: 100%;
-  border-radius: 4px;
-}
-
-.contact-form {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 
 .contact-form button {
-  background: #007bff;
-  color: white;
-  padding: 12px 25px;
+  background: linear-gradient(135deg, #00CFFF, #0099cc);
+  color: #fff;
+  padding: 16px 40px;
   border: none;
-  border-radius: 4px;
+  border-radius: 50px;
   cursor: pointer;
+  font-size: 1.1em;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .contact-form button:hover {
-  background: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 footer {
+  background: #002244;
+  color: #fff;
   text-align: center;
-  padding: 20px;
-  background: #333;
-  color: white;
+  padding: 25px;
 }
