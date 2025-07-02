@@ -2,95 +2,156 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Disha Computer Institute</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background: #007bff;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      background: #333;
-      display: flex;
-      justify-content: center;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 15px;
-      display: block;
-    }
-
-    nav ul li a:hover {
-      background: #555;
-      border-radius: 4px;
-    }
-
-    .content {
-      padding: 40px;
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    button {
-      background: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
-    button:hover {
-      background: #0056b3;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #333;
-      color: white;
-    }
-  </style>
+  <title>Disha Computer Institute - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
     <h1>Welcome to Disha Computer Institute</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Courses</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="content">
-    <h2>Our Courses</h2>
-    <p>We offer various computer courses like MS-CIT, Web Development, Programming Languages, and more.</p>
-    <button>Enroll Now</button>
-  </div>
+  <main>
+    <section class="hero">
+      <h2>Your Gateway to IT Education</h2>
+      <p>Learn MS-CIT, Web Development, Programming Languages, and more with us!</p>
+      <button onclick="enroll()">Enroll Now</button>
+    </section>
+    <section class="features">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?computer,classroom" alt="Classroom">
+        <h3>Modern Labs</h3>
+        <p>Fully equipped computer labs with latest software.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?coding,students" alt="Coding">
+        <h3>Expert Faculty</h3>
+        <p>Learn from experienced and certified instructors.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?certificate,graduation" alt="Certification">
+        <h3>Certifications</h3>
+        <p>Get certified and boost your career prospects.</p>
+      </div>
+    </section>
+  </main>
   <footer>
     &copy; 2025 Disha Computer Institute. All rights reserved.
   </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Disha Computer Institute - Courses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Our Courses</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="courses-list">
+      <div class="card">
+        <h3>MS-CIT</h3>
+        <p>Basic computer course for beginners.</p>
+      </div>
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JavaScript, and modern frameworks.</p>
+      </div>
+      <div class="card">
+        <h3>Programming Languages</h3>
+        <p>C, C++, Java, Python and more.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Disha Computer Institute. All rights reserved.
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Disha Computer Institute - About Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>About Disha Computer Institute</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="about">
+      <h2>Our Story</h2>
+      <p>We are dedicated to providing quality IT education since 2010. Thousands of students have built their careers with us.</p>
+      <h2>Our Mission</h2>
+      <p>Empower students with practical skills to excel in the digital world.</p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Disha Computer Institute. All rights reserved.
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Disha Computer Institute - Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="contact-form">
+      <h2>Get in Touch</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required><br>
+        <input type="email" placeholder="Your Email" required><br>
+        <textarea placeholder="Your Message" required></textarea><br>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Disha Computer Institute. All rights reserved.
+  </footer>
+</body>
+</html>
+
