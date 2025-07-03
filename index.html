@@ -1,253 +1,946 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Disha Computer Institute</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      scroll-behavior: smooth;
-      color: #333;
-    }
-
-    header {
-      background: linear-gradient(135deg, #007bff, #0056b3);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      background: #333;
-      margin: 0;
-      flex-wrap: wrap;
-    }
-
-    nav ul li {
-      margin: 0 10px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      display: block;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    nav ul li a:hover {
-      background: #555;
-      border-radius: 4px;
-    }
-
-    main {
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    section {
-      margin-bottom: 60px;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: #e9f0f7;
-      border-radius: 12px;
-    }
-
-    .hero h2 {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 1.1em;
-      margin-bottom: 20px;
-    }
-
-    .hero button {
-      background: #007bff;
-      color: white;
-      padding: 14px 35px;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      font-size: 1em;
-      transition: background 0.3s;
-    }
-
-    .hero button:hover {
-      background: #0056b3;
-    }
-
-    .features, .courses-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      width: 300px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-
-    .about, .contact-form {
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-
-    .about h2, .contact-form h2 {
-      margin-top: 0;
-    }
-
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      padding: 14px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .contact-form button {
-      background: #007bff;
-      color: white;
-      padding: 14px 35px;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      font-size: 1em;
-      transition: background 0.3s;
-    }
-
-    .contact-form button:hover {
-      background: #0056b3;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #333;
-      color: white;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-      }
-
-      .features, .courses-list {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
-  <script>
-    function enroll() {
-      alert('Thank you for your interest! Please check our courses below.');
-      document.getElementById('courses').scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
-</head>
-<body>
-  <header>
-    <h1>Welcome to Disha Computer Institute</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#courses">Courses</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Home Section -->
-    <section id="home" class="hero">
-      <h2>Your Gateway to IT Education</h2>
-      <p>Learn MS-CIT, Web Development, Programming Languages, and more with us!</p>
-      <button onclick="enroll()">Enroll Now</button>
-    </section>
-
-    <!-- Courses Section -->
-    <section id="courses" class="courses-list">
-      <div class="card">
-        <img src="data:image/jpeg;base64,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">
-        <h3>Modern Labs</h3>
-        <p>Fully equipped computer labs with latest software.</p>
-      </div>
-      <div class="card">
-        <img src="data:image/jpeg;base64,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" alt="Coding">
-        <h3>Expert Faculty</h3>
-        <p>Learn from experienced and certified instructors.</p>
-      </div>
-      <div class="card">
-        <img src="data:image/jpeg;base64,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" alt="Certification">
-        <h3>Certifications</h3>
-        <p>Get certified and boost your career prospects.</p>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-      <h2>About Disha Computer Institute</h2>
-      <p>We are dedicated to providing quality IT education since 2010. Thousands of students have built their careers with us.</p>
-      <h3>Our Mission</h3>
-      <p>Empower students with practical skills to excel in the digital world.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-form">
-      <h2>Contact Us</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required><br>
-        <input type="email" placeholder="Your Email" required><br>
-        <textarea placeholder="Your Message" required></textarea><br>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Disha Computer Institute. All rights reserved.
-  </footer>
-</body>
-</html>
-
-
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Disha Computer Classes</title>
+ <script src="https://cdn.tailwindcss.com"></script>
+ <link href="https://fonts.googleapis.com/css2?
+ family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <style>
+ body {
+ font-family: 'Poppins', sans-serif;
+ scroll-behavior: smooth;
+ }
+ .hero-pattern {
+ background-color: #0f172a;
+ background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+ background-size: 20px 20px;
+ }
+ .course-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+ }
+ .search-results {
+ max-height: 300px;
+ overflow-y: auto;
+ }
+ </style>
+ </head>
+<body class="bg-gray-50">
+ <!-- Navigation -->
+ <nav class="bg-white shadow-md fixed w-full z-10">
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div class="flex justify-between h-16">
+ <div class="flex items-center">
+ <div class="flex-shrink-0 flex items-center">
+ <div class="text-blue-600 font-bold text-2xl">Disha<span class="text-orange
+500">Computer</span></div>
+ </div>
+ </div>
+ <div class="hidden md:flex items-center space-x-8">
+ <a href="#home" class="text-gray-700 hover:text-blue-600 px-3 py-2 font
+medium">Home</a>
+ <a href="#courses" class="text-gray-700 hover:text-blue-600 px-3 py-2 font
+medium">Courses</a>
+ <a href="#about" class="text-gray-700 hover:text-blue-600 px-3 py-2 font
+medium">About Us</a>
+ <a href="#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 font
+medium">Contact</a>
+ </div>
+ <div class="flex items-center md:hidden">
+ <button id="mobile-menu-button" class="text-gray-500 hover:text-blue-600 focus:outline
+none">
+ <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 
+6h16M4 12h16M4 18h16"></path>
+ </svg>
+ </button>
+ </div>
+ </div>
+ </div>
+ <!-- Mobile menu -->
+ <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+ <div class="px-2 pt-2 pb-3 space-y-1">
+ <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font
+medium">Home</a>
+ <a href="#courses" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font
+medium">Courses</a>
+ <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font
+medium">About Us</a>
+ <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font
+medium">Contact</a>
+ </div>
+ </div>
+</nav>
+ <!-- Search Bar -->
+ <div class="fixed top-16 w-full bg-white shadow-md z-10 py-3 px-4">
+ <div class="max-w-7xl mx-auto relative">
+ <div class="relative">
+ <input type="text" id="search-input" placeholder="Search courses, topics..." 
+class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring
+2 focus:ring-blue-500">
+ <button id="search-button" class="absolute right-2 top-2 text-gray-500 hover:text-blue
+600">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 
+24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6
+6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+ </svg>
+ </button>
+ </div>
+ <div id="search-results" class="absolute w-full bg-white mt-1 rounded-lg shadow-lg hidden 
+search-results z-20">
+ <!-- Search results will appear here -->
+ </div>
+ </div>
+ </div>
+ <!-- Hero Section -->
+ <section id="home" class="hero-pattern pt-40 pb-20">
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div class="text-center">
+ <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Unlock Your Potential with <span 
+class="text-blue-400">Disha Computer Classes</span></h1>
+ <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">Master in-demand tech skills 
+with our industry-relevant courses. From programming to design, we've got you covered.</p>
+ <div class="flex flex-col sm:flex-row justify-center gap-4">
+ <a href="#courses" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 
+px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+ Explore Courses
+ </a>
+ <a href="#contact" class="bg-transparent border-2 border-blue-400 text-blue-400 
+hover:bg-blue-400 hover:text-white font-medium py-3 px-6 rounded-lg transition duration-300 ease-in
+out transform hover:scale-105">
+ Contact Us
+ </a>
+ </div>
+ </div>
+ </div>
+</section>
+ <!-- Stats Section -->
+ <section class="bg-white py-12">
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+ <div class="p-4">
+ <p class="text-4xl font-bold text-blue-600">500+</p>
+ <p class="text-gray-600">Students Trained</p>
+ </div>
+ <div class="p-4">
+ <p class="text-4xl font-bold text-blue-600">6+</p>
+ <p class="text-gray-600">Professional Courses</p>
+ </div>
+ <div class="p-4">
+ <p class="text-4xl font-bold text-blue-600">95%</p>
+ <p class="text-gray-600">Placement Rate</p>
+ </div>
+ <div class="p-4">
+ <p class="text-4xl font-bold text-blue-600">10+</p>
+ <p class="text-gray-600">Years Experience</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- Courses Section -->
+ <section id="courses" class="py-16 bg-gray-50">
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div class="text-center mb-16">
+ <h2 class="text-3xl font-bold text-gray-900">Our Courses</h2>
+ <p class="mt-4 text-xl text-gray-600">Comprehensive training programs to boost your 
+career</p>
+ </div>
+ <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+ <!-- C Programming -->
+ <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden transition-all 
+duration-300">
+ <div class="bg-blue-600 h-3"></div>
+ <div class="p-6">
+ <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-lg mb-4">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600" 
+fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 
+20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+ </div>
+ <h3 class="text-xl font-bold text-gray-900 mb-2">C Programming</h3>
+ <p class="text-gray-600 mb-4">Master the fundamentals of programming with C, the 
+foundation of modern languages.</p>
+ <ul class="text-gray-600 mb-6 space-y-2">
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ Basics to Advanced Concepts
+ </li>
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ Practical Projects
+ </li>
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ 3 Months Duration
+ </li>
+ </ul>
+ <button class="course-details-btn w-full bg-blue-600 hover:bg-blue-700 text-white font
+medium py-2 px-4 rounded-lg transition duration-300" data-course="c">
+ Course Details
+ </button>
+ </div>
+ </div>
+ <!-- C++ -->
+ <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden transition-all 
+duration-300">
+ <div class="bg-purple-600 h-3"></div>
+ <div class="p-6">
+ <div class="flex items-center justify-center w-16 h-16 bg-purple-100 rounded-lg mb
+4">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-purple-600" 
+fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 
+3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+ </svg>
+ </div>
+ <h3 class="text-xl font-bold text-gray-900 mb-2">C++ Programming</h3>
+ <p class="text-gray-600 mb-4">Learn object-oriented programming with C++, 
+essential for software development.</p>
+ <ul class="text-gray-600 mb-6 space-y-2">
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ OOP Concepts
+ </li>
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ Data Structures
+ </li>
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ 4 Months Duration
+ </li>
+ </ul>
+ <button class="course-details-btn w-full bg-purple-600 hover:bg-purple-700 text-white 
+font-medium py-2 px-4 rounded-lg transition duration-300" data-course="cpp">
+ Course Details
+ </button>
+ </div>
+ </div>
+ <!-- Java -->
+ <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden transition-all 
+duration-300">
+ <div class="bg-red-600 h-3"></div>
+ <div class="p-6">
+<div class="flex items-center justify-center w-16 h-16 bg-red-100 rounded-lg mb-4">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-red-600" 
+fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 
+17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 
+002 2z" />
+ </svg>
+ </div>
+ <h3 class="text-xl font-bold text-gray-900 mb-2">Java Programming</h3>
+ <p class="text-gray-600 mb-4">Build cross-platform applications with Java, one of the 
+most versatile languages.</p>
+ <ul class="text-gray-600 mb-6 space-y-2">
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ Core Java & Advanced Java
+ </li>
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ GUI Development
+ </li>
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ 6 Months Duration
+ </li>
+ </ul>
+ <button class="course-details-btn w-full bg-red-600 hover:bg-red-700 text-white font
+medium py-2 px-4 rounded-lg transition duration-300" data-course="java">
+ Course Details
+ </button>
+ </div>
+ </div>
+ <!-- Web Development -->
+ <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden transition-all 
+duration-300">
+ <div class="bg-green-600 h-3"></div>
+ <div class="p-6">
+ <div class="flex items-center justify-center w-16 h-16 bg-green-100 rounded-lg mb-4">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600" 
+fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 
+12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3
+9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+ </svg>
+ </div>
+ <h3 class="text-xl font-bold text-gray-900 mb-2">Web Development</h3>
+ <p class="text-gray-600 mb-4">Create responsive websites and web applications with 
+modern technologies.</p>
+ <ul class="text-gray-600 mb-6 space-y-2">
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ HTML, CSS, JavaScript
+ </li>
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ Frontend & Backend
+ </li>
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ 6 Months Duration
+ </li>
+ </ul>
+ <button class="course-details-btn w-full bg-green-600 hover:bg-green-700 text-white 
+font-medium py-2 px-4 rounded-lg transition duration-300" data-course="web">
+ Course Details
+ </button>
+ </div>
+ </div>
+<!-- AutoCAD -->
+ <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden transition-all 
+duration-300">
+ <div class="bg-yellow-600 h-3"></div>
+ <div class="p-6">
+ <div class="flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-lg mb
+4">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-yellow-600" 
+fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 
+17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 
+002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h
+2a2 2 0 00-2 2" />
+ </svg>
+ </div>
+ <h3 class="text-xl font-bold text-gray-900 mb-2">AutoCAD</h3>
+ <p class="text-gray-600 mb-4">Learn professional computer-aided design for 
+engineering and architecture.</p>
+ <ul class="text-gray-600 mb-6 space-y-2">
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ 2D & 3D Modeling
+ </li>
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ Technical Drawing
+ </li>
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ 3 Months Duration
+ </li>
+ </ul>
+ <button class="course-details-btn w-full bg-yellow-600 hover:bg-yellow-700 text-white 
+font-medium py-2 px-4 rounded-lg transition duration-300" data-course="autocad">
+ Course Details
+ </button>
+ </div>
+ </div>
+ <!-- Typing -->
+ <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden transition-all 
+duration-300">
+ <div class="bg-indigo-600 h-3"></div>
+ <div class="p-6">
+ <div class="flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-lg mb-4">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-600" 
+fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 
+4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 
+001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 
+00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+ </svg>
+ </div>
+ <h3 class="text-xl font-bold text-gray-900 mb-2">Typing Course</h3>
+ <p class="text-gray-600 mb-4">Improve your typing speed and accuracy with our 
+specialized training.</p>
+ <ul class="text-gray-600 mb-6 space-y-2">
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ Touch Typing
+ </li>
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ Speed Building
+ </li>
+ <li class="flex items-center">
+ <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+</ul>
+ 1 Month Duration
+ </li>
+ <button class="course-details-btn w-full bg-indigo-600 hover:bg-indigo-700 text-white 
+font-medium py-2 px-4 rounded-lg transition duration-300" data-course="typing">
+ Course Details
+ </button>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- About Section -->
+ <section id="about" class="py-16 bg-white">
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div class="lg:flex lg:items-center lg:justify-between">
+ <div class="lg:w-1/2 mb-10 lg:mb-0">
+ <h2 class="text-3xl font-bold text-gray-900 mb-6">About Disha Computer Classes</h2>
+ <p class="text-lg text-gray-600 mb-6">Disha Computer Classes has been a leading 
+computer education institute since its inception. We are committed to providing quality education and 
+training in various computer courses to help students build successful careers in the IT industry.</p>
+ <p class="text-lg text-gray-600 mb-6">Our experienced faculty, state-of-the-art 
+infrastructure, and industry-relevant curriculum make us the preferred choice for students looking to 
+enhance their technical skills.</p>
+ <div class="flex flex-wrap gap-4">
+ <div class="flex items-center">
+ <div class="bg-blue-100 p-3 rounded-full mr-3">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" 
+fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 
+12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 
+003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+ </svg>
+ </div>
+ <span class="text-gray-700">Certified Courses</span>
+ </div>
+ <div class="flex items-center">
+ <div class="bg-blue-100 p-3 rounded-full mr-3">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" 
+fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 
+6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 
+18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 
+1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+ </svg>
+</div>
+ <span class="text-gray-700">Updated Curriculum</span>
+ </div>
+ <div class="flex items-center">
+ <div class="bg-blue-100 p-3 rounded-full mr-3">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" 
+fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 
+20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 
+015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 
+0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+ </svg>
+ </div>
+ <span class="text-gray-700">Expert Instructors</span>
+ </div>
+ </div>
+ </div>
+ <div class="lg:w-2/5">
+ <div class="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl p-1">
+ <div class="bg-white rounded-lg p-6">
+ <div class="flex justify-center mb-6">
+ <div class="bg-blue-100 p-4 rounded-full">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600" 
+fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4
+4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+ </svg>
+ </div>
+ </div>
+ <h3 class="text-xl font-bold text-center mb-4">Our Facilities</h3>
+ <ul class="space-y-3">
+ <li class="flex items-start">
+ <svg class="h-5 w-5 text-green-500 mr-2 mt-1" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ <span class="text-gray-700">Modern computer labs with latest 
+hardware</span>
+ </li>
+ <li class="flex items-start">
+ <svg class="h-5 w-5 text-green-500 mr-2 mt-1" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+</svg>
+ <span class="text-gray-700">High-speed internet connectivity</span>
+ </li>
+ <li class="flex items-start">
+ <svg class="h-5 w-5 text-green-500 mr-2 mt-1" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ <span class="text-gray-700">Digital library with learning resources</span>
+ </li>
+ <li class="flex items-start">
+ <svg class="h-5 w-5 text-green-500 mr-2 mt-1" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ </svg>
+ <span class="text-gray-700">Comfortable classrooms with projectors</span>
+ </li>
+ <li class="flex items-start">
+ <svg class="h-5 w-5 text-green-500 mr-2 mt-1" fill="none" viewBox="0 0 24 24" 
+stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 
+13l4 4L19 7" />
+ guidance</span>
+ </svg>
+ <span class="text-gray-700">Placement assistance and career 
+</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- Testimonials -->
+ <section class="py-16 bg-gray-50">
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div class="text-center mb-16">
+ <h2 class="text-3xl font-bold text-gray-900">What Our Students Say</h2>
+ <p class="mt-4 text-xl text-gray-600">Hear from our successful alumni</p>
+ </div>
+ <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+ <div class="bg-white p-6 rounded-xl shadow-lg">
+<div class="flex items-center mb-4">
+ <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text
+blue-600 font-bold text-xl">
+ RS
+ </div>
+ <div class="ml-4">
+ <h4 class="font-bold">Rahul Sharma</h4>
+ <p class="text-gray-600 text-sm">Web Development Graduate</p>
+ </div>
+ </div>
+ <div class="mb-4">
+ <div class="flex text-yellow-400">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" 
+fill="currentColor">
+ <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 
+00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 
+1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07
+3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07
+3.292z" />
+ </svg>
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" 
+fill="currentColor">
+ <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 
+00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 
+1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07
+3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07
+3.292z" />
+ </svg>
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" 
+fill="currentColor">
+ <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 
+00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 
+1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07
+3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07
+3.292z" />
+ </svg>
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" 
+fill="currentColor">
+ <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 
+00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 
+1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07
+3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07
+3.292z" />
+ </svg>
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" 
+fill="currentColor">
+<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 
+00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 
+1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07
+3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07
+3.292z" />
+ </svg>
+ </div>
+ </div>
+ <p class="text-gray-700">"The web development course at Disha Computer Classes 
+was comprehensive and practical. I learned everything from HTML to React.js, and now I'm working 
+as a frontend developer at a startup."</p>
+ </div>
+ <div class="bg-white p-6 rounded-xl shadow-lg">
+ <div class="flex items-center mb-4">
+ <div class="h-12 w-12 rounded-full bg-purple-100 flex items-center justify-center text
+purple-600 font-bold text-xl">
+ AP
+ </div>
+ <div class="ml-4">
+ <h4 class="font-bold">Anjali Patel</h4>
+ <p class="text-gray-600 text-sm">Java Programming Graduate</p>
+ </div>
+ </div>
+ <div class="mb-4">
+ <div class="flex text-yellow-400">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" 
+fill="currentColor">
+ <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 
+00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 
+1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07
+3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07
+3.292z" />
+ </svg>
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" 
+fill="currentColor">
+ <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 
+00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 
+1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07
+3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07
+3.292z" />
+ </svg>
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" 
+fill="currentColor">
+ <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 
+00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 
+1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07
+3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07
+3.292z" />
+ </svg>
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" 
+fill="currentColor">
+ <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 
+00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 
+1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07
+3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07
+3.292z" />
+ </svg>
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" 
+fill="currentColor">
+ <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 
+00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 
+1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07
+3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07
+3.292z" />
+ </svg>
+ </div>
+ </div>
+ <p class="text-gray-700">"The instructors at Disha are extremely knowledgeable and 
+supportive. They helped me master Java programming and guided me through complex concepts 
+with patience. Highly recommended!"</p>
+ </div>
+ <div class="bg-white p-6 rounded-xl shadow-lg">
+ <div class="flex items-center mb-4">
+ <div class="h-12 w-12 rounded-full bg-green-100 flex items-center justify-center text
+green-600 font-bold text-xl">
+ VK
+ </div>
+ <div class="ml-4">
+ <h4 class="font-bold">Vikram Kumar</h4>
+ <p class="text-gray-600 text-sm">AutoCAD Graduate</p>
+ </div>
+ </div>
+ <div class="mb-4">
+ <div class="flex text-yellow-400">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" 
+fill="currentColor">
+ <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 
+00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 
+1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07
+3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07
+3.292z" />
+ </svg>
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" 
+fill="currentColor">
+ <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 
+00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 
+1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07
+3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07
+3.292z" />
+ </svg>
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" 
+fill="currentColor">
+ <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 
+00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 
+1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07
+3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07
+3.292z" />
+ </svg>
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" 
+fill="currentColor">
+ <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 
+00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 
+1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07
+3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07
+3.292z" />
+ </svg>
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" 
+fill="currentColor">
+ <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 
+00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 
+1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07
+3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07
+3.292z" />
+ </svg>
+ </div>
+ </div>
+ <p class="text-gray-700">"I joined Disha for AutoCAD training and it was the best 
+decision. The hands-on approach and industry-relevant projects helped me secure a job at an 
+architectural firm within a month of completing the course."</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- Contact Section -->
+ <section id="contact" class="py-16 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div class="text-center mb-16">
+ <h2 class="text-3xl font-bold text-gray-900">Contact Us</h2>
+ <p class="mt-4 text-xl text-gray-600">Get in touch with our team</p>
+ </div>
+ <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+ <div>
+ <form class="space-y-6">
+ <div>
+ <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full 
+Name</label>
+ <input type="text" id="name" name="name" class="w-full px-4 py-2 border border
+gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+ </div>
+ <div>
+ <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email 
+Address</label>
+ <input type="email" id="email" name="email" class="w-full px-4 py-2 border border
+gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+ </div>
+ <div>
+ <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone 
+Number</label>
+ <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border
+gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+ </div>
+ <div>
+ <label for="course" class="block text-sm font-medium text-gray-700 mb
+1">Interested Course</label>
+ <select id="course" name="course" class="w-full px-4 py-2 border border-gray-300 
+rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+ <option value="">Select a course</option>
+ <option value="c">C Programming</option>
+ <option value="cpp">C++ Programming</option>
+ <option value="java">Java Programming</option>
+ <option value="web">Web Development</option>
+ <option value="autocad">AutoCAD</option>
+ <option value="typing">Typing Course</option>
+ </select>
+ </div>
+ <div>
+ <label for="message" class="block text-sm font-medium text-gray-700 mb
+1">Message</label>
+ <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border 
+border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+</div>
+ <div>
+ <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font
+medium py-2 px-4 rounded-lg transition duration-300">
+ Send Message
+ </button>
+ <p class="text-sm text-gray-500 mt-2 text-center">This is a demo form. In a real 
+website, this would send your inquiry to Disha Computer Classes.</p>
+ </div>
+ </form>
+ </div>
+ <div class="bg-gray-50 p-8 rounded-xl">
+ <h3 class="text-xl font-bold text-gray-900 mb-6">Our Information</h3>
+ <div class="space-y-6">
+ <div class="flex items-start">
+ <div class="flex-shrink-0">
+ <div class="bg-blue-100 p-3 rounded-full">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" 
+fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+ </svg>
+ </div>
+ </div>
+ <div class="ml-4">
+ <h4 class="text-lg font-medium text-gray-900">Address</h4>
+ <p class="text-gray-600 mt-1">123 Education Street, Tech Park, <br>City Name - 
+123456</p>
+ </div>
+ </div>
+ <div class="flex items-start">
+ <div class="flex-shrink-0">
+ <div class="bg-blue-100 p-3 rounded-full">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" 
+fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 
+5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 
+005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h
+1C9.716 21 3 14.284 3 6V5z" />
+ </svg>
+ </div>
+ </div>
+<div class="ml-4">
+ <h4 class="text-lg font-medium text-gray-900">Phone</h4>
+ <p class="text-gray-600 mt-1">+91 98765 43210</p>
+ <p class="text-gray-600">+91 12345 67890</p>
+ </div>
+ </div>
+ <div class="flex items-start">
+ <div class="flex-shrink-0">
+ <div class="bg-blue-100 p-3 rounded-full">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" 
+fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 
+8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 
+002 2z" />
+ </svg>
+ </div>
+ </div>
+ <div class="ml-4">
+ <h4 class="text-lg font-medium text-gray-900">Email</h4>
+ <p class="text-gray-600 mt-1">info@dishacomputer.com</p>
+ <p class="text-gray-600">admissions@dishacomputer.com</p>
+ </div>
+ </div>
+ <div class="flex items-start">
+ <div class="flex-shrink-0">
+ <div class="bg-blue-100 p-3 rounded-full">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" 
+fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+ </svg>
+ </div>
+ </div>
+ <div class="ml-4">
+ <h4 class="text-lg font-medium text-gray-900">Working Hours</h4>
+ <p class="text-gray-600 mt-1">Monday - Saturday: 9:00 AM - 7:00 PM</p>
+ <p class="text-gray-600">Sunday: Closed</p>
+ </div>
+ </div>
+ </div>
+ <div class="mt-8">
+ <h4 class="text-lg font-medium text-gray-900 mb-4">Follow Us</h4>
+ <div class="flex space-x-4">
+<a href="#" class="bg-blue-100 p-3 rounded-full text-blue-600 hover:bg-blue-600 
+hover:text-white transition duration-300">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" 
+viewBox="0 0 24 24">
+ <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 
+1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+ </svg>
+ </a>
+ <a href="#" class="bg-blue-100 p-3 rounded-full text-blue-600 hover:bg-blue-600 
+hover:text-white transition duration-300">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" 
+viewBox="0 0 24 24">
+ <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 
+2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 
+2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 
+6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232
+2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 
+2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+ </svg>
+ </a>
+ <a href="#" class="bg-blue-100 p-3 rounded-full text-blue-600 hover:bg-blue-600 
+hover:text-white transition duration-300">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" 
+viewBox="0 0 24 24">
+ <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 
+4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 
+4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919
+4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 
+1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 
+6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 
+1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059
+1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98
+1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 
+6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0
+2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 
+1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+ </svg>
+ </a>
+ <a href="#" class="bg-blue-100 p-3 rounded-full text-blue-600 hover:bg-blue-600 
+hover:text-white transition duration-300">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" 
+viewBox="0 0 24 24">
+ <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 
+1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0
+4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+ </svg>
+</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- Footer -->
+ <footer class="bg-gray-900 text-white py-12">
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+ <div>
+ <h3 class="text-xl font-bold mb-4">Disha Computer Classes</h3>
+ <p class="text-gray-400 mb-4">Empowering students with quality computer education 
+since 2010. Join us to build a successful career in the tech industry.</p>
+ <div class="flex space-x-4">
+ <a href="#" class="text-gray-400 hover:text-white">
+ <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" 
+viewBox="0 0 24 24">
+ <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333
