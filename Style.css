@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, #004080, #002f66);
+  background: linear-gradient(135deg, #FF6600, #CC5200); /* ORANGE shades */
   color: white;
   padding: 50px 20px;
   text-align: center;
@@ -18,7 +18,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  background: #002244;
+  background: #CC5200; /* ORANGE dark */
   margin: 0;
   flex-wrap: wrap;
 }
@@ -32,12 +32,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background: #004080;
+  background: #FF6600; /* ORANGE hover */
   border-radius: 4px;
 }
 
 .hero {
-  background: #E0F7FF;
+  background: #FFEEDD; /* light ORANGE tint */
   border-radius: 12px;
   text-align: center;
   padding: 100px 20px;
@@ -56,7 +56,7 @@ nav ul li a:hover {
 }
 
 .hero button {
-  background: linear-gradient(135deg, #00CFFF, #0099cc);
+  background: linear-gradient(135deg, #FF9900, #CC6600); /* ORANGE gradient */
   color: #fff;
   padding: 16px 40px;
   border: none;
@@ -88,7 +88,7 @@ nav ul li a:hover {
 }
 
 .contact-form button {
-  background: linear-gradient(135deg, #00CFFF, #0099cc);
+  background: linear-gradient(135deg, #FF9900, #CC6600); /* ORANGE gradient */
   color: #fff;
   padding: 16px 40px;
   border: none;
@@ -105,8 +105,9 @@ nav ul li a:hover {
 }
 
 footer {
-  background: #002244;
+  background: #CC5200; /* dark ORANGE */
   color: #fff;
   text-align: center;
   padding: 25px;
 }
+
